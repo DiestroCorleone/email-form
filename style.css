@@ -1,0 +1,170 @@
+*{
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+html{
+	height: 100%;
+}
+
+body{
+	display: grid;
+	min-height: 100%;
+	grid-template-areas: 
+		"nav nav nav nav"
+		"header header header header"
+		"section section section aside"
+		"footer footer footer footer";
+	grid-template-rows: auto auto 1fr auto;
+	background-color: black;
+	color: white;
+}
+
+nav, header, section, aside, footer{
+	padding: 1.5rem;
+}
+
+nav{
+	grid-area: nav;
+}
+
+header{
+	grid-area: header;
+	display: grid;
+	place-items: center;
+}
+
+section{
+	grid-area: section;
+}
+
+aside{
+	grid-area: aside;
+}
+
+footer{
+	grid-area: footer;
+	background-color: orangered;
+}
+
+nav{
+	background-color: orangered;
+}
+
+nav ul{
+	display: flex;
+	justify-content: space-between;
+	list-style-type: none;
+	font-weight: bold;
+}
+
+nav a{
+	text-decoration: none;
+	color: white;
+}
+
+footer a{
+ 	text-decoration: none;
+ 	color: black;
+ 	font-weight: bold;
+ }
+
+nav li:first-of-type, nav li:nth-child(2){
+	display: none;
+}
+
+.button{
+	background-color: orangered;
+	padding: 0.8rem;
+	border: none;
+	font-weight: bold;
+}
+
+.button:hover{
+	opacity: 0.8;
+}
+
+.input, form{
+	padding: 0.5rem;
+	border: 2px solid orangered;
+}
+
+h1{
+	font-family: 'Alfa Slab One';	
+	font-size: 4rem;
+	background: linear-gradient(to right, orangered, gold, orange);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+h1 img{
+	width: 4rem;
+}
+
+input, select, textarea{
+	width: 100%;
+	resize: vertical;
+}
+
+:not(h1){
+	font-family: Lato;
+}
+
+@media screen and (max-width: 800px){
+	nav ul{
+		flex-direction: column;
+	}
+
+	nav:not(:target) li:first-of-type{
+		display: inherit;
+	}
+
+	nav:not(:target) li{
+		display: none;
+	}
+
+	nav:target li{
+		display: inherit;
+	}
+
+	nav:target li:first-of-type{
+		display: none;
+	}
+
+	body{
+		grid-template-areas: 
+		"nav nav nav"
+		"header header header"
+		"section section aside"
+		"footer footer footer";
+	}
+
+	h1{
+		font-size: 2rem;
+	}
+
+	h1 img{
+		width: 2rem;
+	}
+}
+
+@media screen and (max-width: 480px){
+	body{
+		grid-template-areas: 
+		"nav"
+		"header"
+		"section"
+		"aside"
+		"footer";
+		grid-template-rows: auto auto 1fr auto auto;
+	}
+
+	h1{
+		font-size: 1.5rem;
+	}
+
+	h1 img{
+		width: 1rem;
+	}	
+}	

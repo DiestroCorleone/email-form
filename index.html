@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel = "stylesheet" href = "style.css">
+	<link rel = "stylesheet" href = "https://fonts.googleapis.com/css?family=Lato">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Alfa+Slab+One">
+	<title>Send an e-mail! | www.sendanemail.com</title>
+</head>
+<body>
+	<nav id="menu">
+		<ul>
+			<li><a href = "#menu">&#9776;</a></li>
+			<li><a href = "#">x</a></li>			
+			<li><a href="https://duckduckgo.com/">home</a></li>
+			<li><a href="https://aulasvirtuales.bue.edu.ar/">who we are</a></li>
+			<li><a href="https://mavizoso.net/">where are we</a></li>
+			<li><a href="index.html">contact us</a></li>
+		</ul>
+	</nav>
+	<header class="center">
+		<h1>SENDANEMAIL.COM <img src="https://icongr.am/clarity/email.svg?size=82&color=ff2400"></h1>
+	</header>
+	<section>
+	<h2>Complete the form and send me an e-mail (yes, I'm lonely)</h2><br>
+	<form action="form-action.php" method="POST">
+		<label for="email">Your e-mail adress:</label><br><br>
+		<input type="email" id="email" name="email" placeholder="me@something.com" class="input" required><br><br>
+		<label for="name">Your name:</label><br><br>
+		<input type="text" id="name" name="name" placeholder="Self-explanatory, I guess..." class="input" required><br><br>
+		<label for="how">How did you find about this website?</label><br><br>
+		<select name="how" id="how"  class="input" required>
+			<option disabled selected value>Click, don't be shy...</option>
+			<option value="newspapers">Newspapers</option>
+			<option value="socialMedia">Social media</option>
+			<option value="guyOnSubway">Some random guy on the subway train told me</option>
+		</select><br><br>
+		<textarea id="content" name="content" placeholder="Write something. Anything." rows="10"class="input" required></textarea><br><br>
+		<input type="submit" value="Hit send!" class="button">
+	</form>
+	</section>
+	<aside>
+		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+	</aside>
+	<footer>
+		<p>Coded by Diestro Corleone<br><a href="mailto:matias.perez.mcd@gmail.com">Mail me!</a></p>
+	</footer>		
+</body>
+</html>
